@@ -1,4 +1,4 @@
-export const artists = [
+const artists = [
     {
       "id": 0,
       "name": "Amedeo Modigliani",
@@ -229,8 +229,8 @@ console.log(artists[8].name);
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(artists, i) {
-  return `the artist at index ${i} is ${artists[i].name}`
+function getArtistByIndex(/*Your Code Here*/) {
+  /*Your Code Here*/
 }  
 
 
@@ -243,17 +243,8 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(artists){
-  let lastCenturyArtists = [];
-  let years = [];
-  for(let i = 0; i < artists.length; i++){
-    years = artists[i].years.split(' ');
-    if(years.length != 3)
-      continue;
-    if(1900 < years[0] && years[2] < 2000)
-      lastCenturyArtists.push(artists[i].name);
-  }
-  return lastCenturyArtists;
+function get20s(/*Your Code Here*/){
+  /*Your Code Here*/
 }
 
 
@@ -267,9 +258,8 @@ function get20s(artists){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(array, i){
-  array.splice(i, 1);
-  return array.length;
+function removeArtist(/*Your Code Here*/){
+   /*Your Code Here*/
 }
    
 
@@ -289,17 +279,9 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(artists){
-  artists.push({ 
-    id: 20,
-    name: 'Matt', 
-    years: '1900 - current day',
-    genre: 'Web Design', 
-    nationality: 'Wanabe Texan',
-    bio: 'lorem ipsum too lazy to get the rest'
-  });
-  return artists;
-}
+function addArtist(/*Your Code Here*/){
+    /*Your Code Here*/
+  }
 
   
 
@@ -310,13 +292,8 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(artists){
-  let busyArtists = [];
-  for(let artist of artists){
-    if(artist.paintings > 100)
-      busyArtists.push(artist.name);
-  }
-  return busyArtists;
+function lotsOfArt(/*Your Code Here*/){
+  /*Your Code Here*/
 }
 
 
@@ -365,19 +342,3 @@ function randomize(/* Code here */){
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
  
- 
- 
- /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
- function foo(){
-  console.log('its working');
-  return 'bar';
-}
-/*Don't touch the code after this line! */
-export default{
-  foo,
-  getArtistByIndex,
-  get20s,
-  removeArtist,
-  addArtist,
-  lotsOfArt
-}
