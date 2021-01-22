@@ -324,10 +324,21 @@ The function should console.log 50 chunks of HTML code that match the structure 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
 function getHTML(/* Code here */){
+    let cheerio = require('cheerio');
+    let jsonframe = require('jsonframe-cheerio');
 
-    /* Code here */
-
-  }
+    let $ = cheerio.load('https://www.kaggle.com/ikarus777/best-artworks-of-all-time');
+    jsonframe($); // initializes the plugin
+    
+    let frame = {
+        'artist': {
+            'selector': '.cnWiPN',
+            'data': [{
+                
+            }]
+        }
+    }
+}
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
