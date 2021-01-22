@@ -246,12 +246,12 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(artists){
   let lastCenturyArtists = [];
   let years = [];
-  for(let i = 0; i < artists.length; i++){
-    years = artists[i].years.split(' ');
+  for(let artist of artists){
+    years = artist.years.split(' ');
     if(years.length != 3)
       continue;
     if(1900 < years[0] && years[2] < 2000)
-      lastCenturyArtists.push(artists[i].name);
+      lastCenturyArtists.push(artist.name);
   }
   return lastCenturyArtists;
 }
@@ -344,11 +344,9 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
-  }
+function getHTML(data){
+  console.log(data);
+}
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪

@@ -1,3 +1,5 @@
+// this is if I want to check console.log without the auto-grader, because sometimes it's easier without so much stuff cluttering the console
+
 const artists = [
     {
       "id": 0,
